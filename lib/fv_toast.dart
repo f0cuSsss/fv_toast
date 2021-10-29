@@ -79,10 +79,10 @@ class FvToast {
   }) {
     final mq = MediaQuery.of(context);
     return OverlayEntry(
-      builder: (context) => ToastAnimation(
-        child: Positioned(
-          top: icon != null ? mq.size.height * 0.45 : 50,
-          width: mq.size.width,
+      builder: (context) => Positioned(
+        top: icon != null ? mq.size.height * 0.45 : 50,
+        width: mq.size.width,
+        child: ToastAnimation(
           child: Container(
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
             width: double.infinity,
